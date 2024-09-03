@@ -25,7 +25,7 @@ const workExperiences = [
 export default function WorkExperiences() {
   return (
     <div className="mb-12 rounded-md bg-primary-foreground p-6">
-      <h2 className="mb-6 text-xl font-bold">Work Experiences</h2>
+      <h2 className="mb-4 text-xl font-bold">Work Experiences</h2>
       <table className="mb-6 w-full">
         <tbody>
           {workExperiences.map((job, index) => (

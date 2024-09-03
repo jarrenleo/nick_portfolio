@@ -44,15 +44,15 @@ const articles = [
 export default function Articles() {
   return (
     <div className="mb-8">
-      <h2 className="mb-6 text-2xl font-semibold">Featured Articles</h2>
+      <h2 className="mb-4 text-2xl font-semibold">Featured Articles</h2>
       <div className="overflow-x-auto pb-4">
         <div className="flex space-x-4">
           {articles.map((article) => (
             <div
               key={article.title}
-              className="mb-4 w-96 flex-shrink-0 rounded-md bg-primary-foreground p-6"
+              className="mb-4 w-80 flex-shrink-0 rounded-md bg-primary-foreground p-6"
             >
-              <div className="relative mb-4 h-56 w-full">
+              <div className="relative mb-4 h-52 w-full">
                 <Image
                   src={article.image}
                   alt={article.title}

@@ -19,7 +19,7 @@ export default function Intro() {
       <TypeAnimation
         sequence={["Hi, I'm Nicholas Ong\nand you can call me Nick."]}
         wrapper="h1"
-        className="mb-4 h-20 w-full whitespace-pre-line text-3xl font-bold leading-snug"
+        className="mb-4 h-16 w-full whitespace-pre-line text-2xl font-bold leading-snug"
       />
       <p className="mb-4 text-muted-foreground">
         I am an aspiring writer from Singapore. I write about tech,
