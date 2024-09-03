@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Download } from "lucide-react";
 
 const workExperience = [
@@ -56,13 +57,14 @@ export default function WorkExperience() {
           ))}
         </tbody>
       </table>
-      <button
-        href="/"
+      <Link
+        href="https://drive.usercontent.google.com/u/0/uc?id=1xhbRBVsdb1Bsx89hLgtqNB2eR0smsVfV&export=download"
+        download="Nicholas_Ong_Resume.pdf"
         className="flex w-full items-center justify-center gap-2 rounded-md bg-secondary py-3 text-sm font-semibold transition-colors hover:bg-secondary-foreground/20"
       >
-        <span>Download CV</span>
+        <span>Download Resume</span>
         <Download size={16} />
-      </button>
+      </Link>
     </div>
   );
 }
