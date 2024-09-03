@@ -5,7 +5,7 @@ const workExperiences = [
   {
     company: "The Smart Local",
     role: "Jr. Editorial Assistant",
-    period: "09 / 2023 — 01 / 2024",
+    period: "09 / 2023 -\n01 / 2024",
     logo: "/tsl logo.png",
   },
   {
@@ -26,11 +26,11 @@ export default function WorkExperiences() {
   return (
     <div className="mb-12 rounded-md bg-primary-foreground p-6">
       <h2 className="mb-4 text-xl font-bold">Work Experiences</h2>
-      <table className="mb-6 w-full">
+      <table className="mb-4 w-full">
         <tbody>
           {workExperiences.map((job, index) => (
             <tr key={index}>
-              <td className="py-4 pr-2">
+              <td className="py-2 pr-2">
                 <Image
                   src={job.logo}
                   alt={`${job.company} logo`}
@@ -42,13 +42,13 @@ export default function WorkExperiences() {
               <td>
                 <div className="flex flex-col gap-0.5">
                   <span className="text-sm font-semibold">{job.company}</span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-xs text-muted-foreground">
                     {job.role}
                   </span>
                 </div>
               </td>
-              <td>
-                <span className="text-xs text-muted-foreground">
+              <td className="text-center">
+                <span className="whitespace-pre-line text-xs text-muted-foreground">
                   {job.period}
                 </span>
               </td>
