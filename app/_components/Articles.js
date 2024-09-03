@@ -54,16 +54,66 @@ const articles = [
   },
 ];
 
+// export default function Articles() {
+//   return (
+//     <div className="mb-8">
+//       <h2 className="mb-4 text-2xl font-semibold">Featured Articles</h2>
+//       <div className="overflow-x-auto pb-4">
+//         <div className="flex space-x-4">
+//           {articles.map((article) => (
+//             <div
+//               key={article.title}
+//               className="mb-4 w-80 flex-shrink-0 rounded-md bg-primary-foreground"
+//             >
+//               <div className="relative h-52 w-full">
+//                 <Image
+//                   src={article.articleImage}
+//                   alt={article.title}
+//                   fill
+//                   className="rounded-t-md object-cover"
+//                 />
+//                 <div className="absolute left-2 top-2">
+//                   <Image
+//                     src={article.partnerImage}
+//                     alt={`${article.partner} Logo`}
+//                     width={32}
+//                     height={32}
+//                     className="rounded-full object-cover"
+//                   />
+//                 </div>
+//               </div>
+//               <div className="p-4">
+//                 <h3 className="mb-2 font-semibold">{article.title}</h3>
+//                 <p className="mb-4 text-sm text-muted-foreground">
+//                   {article.description}
+//                 </p>
+//                 <Link
+//                   href={article.link}
+//                   target="_blank"
+//                   className="flex items-center gap-1 text-sm text-primary transition-all hover:font-semibold"
+//                 >
+//                   <span>View Full Article</span>
+//                   <ArrowRightIcon size={16} />
+//                 </Link>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 export default function Articles() {
   return (
     <div className="mb-8">
       <h2 className="mb-4 text-2xl font-semibold">Featured Articles</h2>
-      <div className="overflow-x-auto pb-4">
-        <div className="flex space-x-4">
+      <div className="overflow-x-auto pb-4 md:overflow-x-visible">
+        <div className="flex space-x-4 md:grid md:grid-cols-3 md:gap-4 md:space-x-0">
           {articles.map((article) => (
             <div
               key={article.title}
-              className="mb-4 w-80 flex-shrink-0 rounded-md bg-primary-foreground"
+              className="w-80 flex-shrink-0 rounded-md bg-primary-foreground md:w-full"
             >
               <div className="relative h-52 w-full">
                 <Image
