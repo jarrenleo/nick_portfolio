@@ -28,6 +28,7 @@ export default function Socials() {
         <Link
           key={social.name}
           href={social.link}
+          target="_blank"
           className="transition-colors hover:text-secondary-foreground/80"
         >
           <svg

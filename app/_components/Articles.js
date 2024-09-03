@@ -56,8 +56,7 @@ export default function Articles() {
                 <Image
                   src={article.image}
                   alt={article.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
                   className="rounded-md"
                 />
               </div>

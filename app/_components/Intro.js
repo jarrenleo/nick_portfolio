@@ -11,8 +11,7 @@ export default function Intro() {
         <Image
           src="/profile.jpg"
           alt="Nicholas Ong profile picture"
-          layout="fill"
-          objectFit="cover"
+          fill
           className="rounded-full"
         />
       </div>
