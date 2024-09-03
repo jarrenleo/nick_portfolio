@@ -67,6 +67,7 @@ export default function Articles() {
               </p>
               <Link
                 href={article.link}
+                target="_blank"
                 className="text-sm text-primary hover:underline"
               >
                 View Full Article

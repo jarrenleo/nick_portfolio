@@ -1,7 +1,7 @@
 import Navigation from "./_components/Navigation";
 import Intro from "./_components/Intro";
 import Articles from "./_components/Articles";
-import WorkExperiences from "./_components/WorkExperiences";
+import WorkExperience from "./_components/WorkExperience";
 import Footer from "./_components/Footer";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         <Navigation />
         <Intro />
         <Articles />
-        <WorkExperiences />
+        <WorkExperience />
       </div>
       <Footer />
     </main>

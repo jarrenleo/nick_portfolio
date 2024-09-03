@@ -30,7 +30,7 @@ export default function WorkExperiences() {
         <tbody>
           {workExperiences.map((job, index) => (
             <tr key={index}>
-              <td className="py-2 pr-2">
+              <td className="py-3 pr-2">
                 <Image
                   src={job.logo}
                   alt={`${job.company} logo`}
