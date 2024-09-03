@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Download } from "lucide-react";
 
-const workExperiences = [
+const workExperience = [
   {
     company: "The Smart Local",
     role: "Jr. Editorial Assistant",
@@ -22,13 +22,13 @@ const workExperiences = [
   },
 ];
 
-export default function WorkExperiences() {
+export default function WorkExperience() {
   return (
     <div className="mb-12 rounded-md bg-primary-foreground p-6">
-      <h2 className="mb-4 text-xl font-bold">Work Experiences</h2>
+      <h2 className="mb-4 text-xl font-bold">Work Experience</h2>
       <table className="mb-4 w-full">
         <tbody>
-          {workExperiences.map((job, index) => (
+          {workExperience.map((job, index) => (
             <tr key={index}>
               <td className="py-3 pr-2">
                 <Image
