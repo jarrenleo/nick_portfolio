@@ -1,7 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["familiesforlife.sg", "thesmartlocal.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "familiesforlife.sg",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "thesmartlocal.com",
+        pathname: "**",
+      },
+    ],
   },
 };
 

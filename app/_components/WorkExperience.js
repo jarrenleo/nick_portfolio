@@ -6,41 +6,41 @@ const workExperience = [
   {
     company: "The Smart Local",
     role: "Jr. Editorial Assistant",
-    period: "09 / 2023 -\n01 / 2024",
-    logo: "/tsl logo.png",
+    period: "09 / 2023 - 01 / 2024",
+    logo: "/work_experience/tsl logo.png",
   },
   {
     company: "The Secret Mermaid",
     role: "Barback",
     period: "2020 - 2023",
-    logo: "/tsm logo.png",
+    logo: "/work_experience/tsm logo.png",
   },
   {
     company: "Singapore Air Force",
     role: "Air Ops. Systems Expert",
     period: "2015 - 2020",
-    logo: "/rsaf logo.svg",
+    logo: "/work_experience/rsaf logo.png",
   },
 ];
 
 export default function WorkExperience() {
   return (
-    <div className="mb-12 rounded-md bg-primary-foreground p-6">
-      <h2 className="mb-4 text-xl font-bold">Work Experience</h2>
-      <table className="mb-4 w-full">
+    <div className="mb-8 w-full rounded-md bg-primary-foreground p-4 sm:max-w-96">
+      <h2 className="text-xl font-bold">Work Experience</h2>
+      <table className="mb-2 w-full border-separate border-spacing-y-4">
         <tbody>
           {workExperience.map((job, index) => (
             <tr key={index}>
-              <td className="py-3 pr-2">
+              <td>
                 <Image
                   src={job.logo}
                   alt={`${job.company} logo`}
-                  width={32}
-                  height={32}
+                  width={36}
+                  height={36}
                   className="rounded-full"
                 />
               </td>
-              <td>
+              <td className="pl-2">
                 <div className="flex flex-col gap-0.5">
                   <span className="text-sm font-semibold">{job.company}</span>
                   <span className="text-xs text-muted-foreground">
@@ -49,7 +49,7 @@ export default function WorkExperience() {
                 </div>
               </td>
               <td className="text-center">
-                <span className="whitespace-pre-line text-xs text-muted-foreground">
+                <span className="text-xs text-muted-foreground">
                   {job.period}
                 </span>
               </td>
