@@ -35,8 +35,8 @@ export default function WorkExperience() {
                 <Image
                   src={job.logo}
                   alt={`${job.company} logo`}
-                  width={36}
-                  height={36}
+                  width={32}
+                  height={32}
                   className="rounded-full"
                 />
               </td>

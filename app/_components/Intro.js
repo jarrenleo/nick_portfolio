@@ -13,7 +13,7 @@ export default function Intro() {
           alt="Nicholas Ong profile picture"
           width={96}
           height={96}
-          className="rounded-full"
+          className="rounded-full outline outline-secondary"
         />
       </div>
       <TypeAnimation
