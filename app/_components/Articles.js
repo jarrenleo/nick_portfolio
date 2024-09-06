@@ -57,7 +57,7 @@ const articles = [
 export default function Articles() {
   return (
     <div className="mb-8">
-      <h2 className="mb-4 text-xl font-bold">Things I've Worked On</h2>
+      <h2 className="mb-4 text-xl font-bold">Things I&apos;ve Worked On</h2>
       <div className="overflow-x-scroll pb-4">
         <div className="flex gap-4">
           {articles.map((article) => (
