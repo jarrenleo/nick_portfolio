@@ -9,10 +9,10 @@ export default function Home() {
     <main className="mx-auto max-w-6xl px-6 pt-8 sm:flex sm:flex-col sm:px-8">
       <Navigation />
       <div className="flex flex-col sm:flex sm:flex-row sm:flex-wrap">
-        <div className="order-1 flex items-center sm:w-1/2 sm:pr-4">
+        <div className="order-1 sm:flex sm:w-1/2 sm:items-center sm:pr-4">
           <Intro />
         </div>
-        <div className="order-3 flex items-center justify-center sm:order-2 sm:w-1/2">
+        <div className="order-3 sm:order-2 sm:flex sm:w-1/2 sm:items-center sm:justify-end">
           <WorkExperience />
         </div>
         <div className="order-2 w-full sm:order-3">
