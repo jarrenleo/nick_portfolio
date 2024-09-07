@@ -22,7 +22,7 @@ export default function Intro() {
         repeat={Infinity}
         className="mb-4 h-6 text-2xl font-bold"
       />
-      <p className="mb-4 text-sm text-muted-foreground sm:text-base">
+      <p className="mb-4 text-balance text-sm text-muted-foreground sm:text-base">
         A firm believer that the book is always better than the film, I love
         crafting stories and messages that bring meaning and insight. Meticulous
         to a fault, I take pride in researching on my subject matter regardless
