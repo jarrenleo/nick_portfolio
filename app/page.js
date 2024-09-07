@@ -12,7 +12,7 @@ export default function Home() {
         <div className="order-1 sm:flex sm:w-1/2 sm:items-center sm:pr-4">
           <Intro />
         </div>
-        <div className="order-3 sm:order-2 sm:flex sm:w-1/2 sm:items-center sm:justify-end">
+        <div className="order-3 sm:order-2 sm:flex sm:w-1/2 sm:items-end sm:justify-end">
           <WorkExperience />
         </div>
         <div className="order-2 w-full sm:order-3">
