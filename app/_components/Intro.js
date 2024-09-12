@@ -17,10 +17,10 @@ export default function Intro() {
         />
       </div>
       <TypeAnimation
-        sequence={["Hello, I am Nicholas.", 1000, "Hi, I am Nick.", 1000]}
+        sequence={["Hello, my name is Nicholas.", 1000, "Hi, I am Nick.", 1000]}
         wrapper="h1"
         repeat={Infinity}
-        className="mb-4 h-6 text-2xl font-bold"
+        className="mb-2 text-xl font-bold sm:text-2xl"
       />
       <p className="mb-4 text-balance text-sm text-muted-foreground sm:text-base">
         A firm believer that the book is always better than the film, I love
