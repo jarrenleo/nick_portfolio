@@ -1,17 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Sun, MoonStar } from "lucide-react";
 
 export default function Navigation() {
   const { setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
 
   const isDarkMode = resolvedTheme === "dark";
-
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
 
   return (
     <div className="mb-8 flex items-center justify-end gap-2">

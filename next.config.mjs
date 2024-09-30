@@ -4,13 +4,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "familiesforlife.sg",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "thesmartlocal.com",
-        pathname: "**",
+        hostname: "hrtbkhxwperxcpdnwgzz.supabase.co",
+        port: "",
+        pathname: "/storage/v1/object/public/**",
       },
     ],
   },
