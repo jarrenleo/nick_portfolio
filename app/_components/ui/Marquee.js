@@ -11,7 +11,7 @@ export default function Marquee({
     <div
       {...props}
       className={cn(
-        "group flex flex-row overflow-hidden p-2 [--duration:60s] [--gap:1rem] [gap:var(--gap)]",
+        "group flex flex-row overflow-hidden p-2 duration-300 animate-in fade-in [--duration:60s] [--gap:1rem] [gap:var(--gap)]",
         className,
       )}
     >

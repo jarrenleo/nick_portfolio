@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Inconsolata } from "next/font/google";
 import ThemeProvider from "@/app/_providers/ThemeProvider";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inconsolata = Inconsolata({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Nicholas Ong",
@@ -13,7 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`bg-background text-foreground ${inter.className}`}>
+      <body
+        className={`bg-background text-foreground ${inconsolata.className}`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
