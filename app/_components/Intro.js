@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { GeistMono } from "geist/font/mono";
 import Socials from "./Socials";
 import { TypeAnimation } from "react-type-animation";
 
@@ -23,7 +24,7 @@ export default function Intro() {
         sequence={["Hello, my name is Nicholas.", 1000, "Hi, I am Nick.", 1000]}
         wrapper="h1"
         repeat={Infinity}
-        className="mb-2 text-xl font-bold sm:text-2xl"
+        className={`mb-2 text-xl font-bold sm:text-2xl ${GeistMono.className}`}
       />
       <p className="mb-4 text-balance text-sm text-muted-foreground sm:text-base">
         {description}
