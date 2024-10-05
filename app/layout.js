@@ -14,8 +14,7 @@ export default function RootLayout({ children }) {
       <body className={`bg-background text-foreground ${GeistSans.className}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           {children}

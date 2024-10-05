@@ -22,18 +22,18 @@ function ArticleCard({
           alt={title}
           className="h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover/item:scale-110"
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background to-transparent"></div>
+        <div className="absolute inset-x-0 bottom-0 h-full bg-neutral-900 opacity-20"></div>
       </div>
       {sponsor && (
         <Image
           src={sponsorLogo}
           alt={`${sponsor} Logo`}
-          width={24}
-          height={24}
+          width={32}
+          height={32}
           className="absolute left-2 top-2 rounded-full object-cover"
         />
       )}
-      <h3 className="absolute bottom-3 left-3 text-balance pr-3 font-semibold">
+      <h3 className="absolute bottom-3 left-3 text-balance pr-3 font-semibold text-neutral-100">
         {title}
       </h3>
     </Link>
@@ -59,8 +59,8 @@ export default async function Articles() {
             <ArticleCard key={article.title} {...article} />
           ))}
         </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/5 bg-gradient-to-r from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/5 bg-gradient-to-l from-background"></div>
       </div>
     </>
   );
