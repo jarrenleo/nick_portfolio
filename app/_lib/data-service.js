@@ -15,7 +15,7 @@ export async function getWorkExperience() {
 export async function getResume() {
   const { data, error } = await supabase.storage
     .from("resume")
-    .download("nicholas ong.pdf");
+    .download("Resume_NicholasOng.pdf");
 
   if (error) notFound();
 
