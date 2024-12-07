@@ -17,7 +17,7 @@ export default function DownloadButton() {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "nicholas ong.pdf";
+    a.download = "Resume_NicholasOng.pdf";
     document.body.appendChild(a);
     a.click();
     URL.revokeObjectURL(url);
