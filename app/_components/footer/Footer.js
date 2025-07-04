@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="bg-muted">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pb-12 pt-16">
-        <div className="flex flex-col gap-[88px]">
+        <div className="flex flex-col gap-14">
           <Logo />
           <div className="flex flex-col text-sm sm:text-base">
             <p className="text-muted-foreground">
@@ -37,21 +37,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="transition-colors hover:text-foreground">
-                <Link href="https://x.com/nicongggg" target="_blank">
-                  X
-                </Link>
-              </li>
-              <li className="transition-colors hover:text-foreground">
                 <Link href="https://www.instagram.com/ig_nchls" target="_blank">
                   Instagram
                 </Link>
               </li>
               <li className="transition-colors hover:text-foreground">
                 <Link
-                  href="https://discordapp.com/users/369924066741714946"
+                  href="https://www.myskillsfuture.gov.sg/csp/public/profile/0zw4h52vob8f14"
                   target="_blank"
                 >
-                  Discord
+                  MySkillsFuture
                 </Link>
               </li>
             </ul>
