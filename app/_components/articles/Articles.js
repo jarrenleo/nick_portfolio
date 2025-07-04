@@ -8,7 +8,9 @@ export default async function Articles() {
   return (
     <section className="mb-32">
       <div className="mb-8 flex items-end justify-between">
-        <h2 className="font-hedvig-serif text-3xl">Things I've Worked On</h2>
+        <h2 className="font-hedvig-serif text-3xl">
+          Things I&apos;ve Worked On
+        </h2>
         <Link
           href="https://thesmartlocal.com/read/author/nicholasong/"
           target="_blank"

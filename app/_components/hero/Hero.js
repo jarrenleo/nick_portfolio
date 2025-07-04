@@ -16,16 +16,16 @@ export default function Hero() {
         </div>
 
         <div className="mb-8">
-          <h1 className="font-hedvig-serif mb-6 text-4xl">
-            Hey, I'm Nicholas.
+          <h1 className="mb-6 font-hedvig-serif text-4xl">
+            Hey, I&apos;m Nicholas.
           </h1>
           <p className="text-balance text-muted-foreground">
             A firm believer that the book is always better than the film, I love
             crafting stories and messages that bring meaning and insight.
             Meticulous to a fault, I take pride in researching on my subject
-            matter regardless of importance or scale. If you're looking for a
-            <span className="font-bold"> writer </span>who blends humour, flair,
-            creativity, and wit, I'm your guy.
+            matter regardless of importance or scale. If you&apos;re looking for
+            a<span className="font-bold"> writer </span>who blends humour,
+            flair, creativity, and wit, I&apos;m your guy.
           </p>
         </div>
 

@@ -6,7 +6,9 @@ export default async function WorkExperience() {
 
   return (
     <section className="mb-16">
-      <h2 className="font-hedvig-serif mb-4 text-3xl">Places I've Worked At</h2>
+      <h2 className="mb-4 font-hedvig-serif text-3xl">
+        Places I&apos;ve Worked At
+      </h2>
       <table className="w-full border-separate border-spacing-y-6">
         <tbody>
           {workExperience.map((job, index) => (
