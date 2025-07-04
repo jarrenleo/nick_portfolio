@@ -12,16 +12,6 @@ export async function getWorkExperience() {
   return data;
 }
 
-export async function getResume() {
-  const { data, error } = await supabase.storage
-    .from("resume")
-    .download("Resume_NicholasOng.pdf");
-
-  if (error) notFound();
-
-  return data;
-}
-
 export async function getArticles() {
   const { data, error } = await supabase
     .from("articles")
