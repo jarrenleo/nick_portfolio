@@ -4,10 +4,10 @@ import Logo from "../navigation/Logo";
 export default function Footer() {
   return (
     <footer id="footer" className="bg-muted">
-      <div className="mx-auto flex max-w-7xl items-start justify-between px-6 pb-12 pt-16">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pb-12 pt-16">
         <div className="flex flex-col gap-[88px]">
           <Logo />
-          <div className="flex flex-col">
+          <div className="flex flex-col text-sm sm:text-base">
             <p className="text-muted-foreground">
               &copy; {new Date().getFullYear()} Nicholas Ong
             </p>
@@ -16,8 +16,8 @@ export default function Footer() {
         </div>
         <div className="flex gap-8">
           <div>
-            <h3 className="mb-4 text-xl font-medium">Contact</h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <h3 className="mb-4 text-lg font-medium sm:text-xl">Contact</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground sm:text-base">
               <li className="transition-colors hover:text-foreground">
                 <Link href="mailto:nicongggg@gmail.com" target="_blank">
                   Email
@@ -26,8 +26,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-xl font-medium">Connect</h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <h3 className="mb-4 text-lg font-medium sm:text-xl">Connect</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground sm:text-base">
               <li className="transition-colors hover:text-foreground">
                 <Link
                   href="https://www.linkedin.com/in/nicholasong-re"

@@ -6,7 +6,7 @@ export default async function WorkExperience() {
 
   return (
     <section className="mb-16">
-      <h2 className="mb-4 font-hedvig-serif text-3xl">
+      <h2 className="mb-4 font-hedvig-serif text-2xl sm:text-3xl">
         Places I&apos;ve Worked At
       </h2>
       <table className="w-full border-separate border-spacing-y-6">
@@ -14,7 +14,7 @@ export default async function WorkExperience() {
           {workExperience.map((job, index) => (
             <tr key={index}>
               <td>
-                <div className="relative h-12 w-12 md:h-14 md:w-14">
+                <div className="relative h-10 w-10 md:h-14 md:w-14">
                   <Image
                     src={job.logo}
                     alt={`${job.company} logo`}
@@ -25,14 +25,18 @@ export default async function WorkExperience() {
               </td>
               <td className="pl-2">
                 <div className="flex flex-col gap-0.5">
-                  <span className="font-medium">{job.company}</span>
-                  <span className="text-sm text-muted-foreground">
+                  <span className="text-sm font-medium sm:text-base">
+                    {job.company}
+                  </span>
+                  <span className="text-xs text-muted-foreground sm:text-sm">
                     {job.role}
                   </span>
                 </div>
               </td>
               <td>
-                <span className="font-medium">{job.period}</span>
+                <span className="text-sm font-medium sm:text-base">
+                  {job.period}
+                </span>
               </td>
             </tr>
           ))}

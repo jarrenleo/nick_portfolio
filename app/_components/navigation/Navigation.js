@@ -4,9 +4,9 @@ import Logo from "./Logo";
 export default function Navigation() {
   return (
     <nav className="sticky top-0 z-10 mb-32 w-full bg-background py-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-end justify-between">
         <Logo />
-        <div className="flex items-center gap-4 text-xl font-medium">
+        <div className="flex items-center gap-4 text-lg font-medium sm:text-xl">
           <Link
             href="https://hrtbkhxwperxcpdnwgzz.supabase.co/storage/v1/object/public/resume//Resume_NicholasOng.pdf"
             target="_blank"
