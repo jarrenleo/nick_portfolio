@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 export default function Navigation() {
   return (
-    <nav className="sticky top-0 z-10 mb-32 w-full bg-background py-6">
+    <nav className="sticky top-0 z-10 mb-24 w-full bg-background py-6 sm:mb-32">
       <div className="flex items-end justify-between">
         <Logo />
         <div className="flex items-center gap-4 text-lg font-medium sm:text-xl">
