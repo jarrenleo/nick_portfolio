@@ -6,7 +6,7 @@ export default async function Articles() {
   const articles = await getArticles();
 
   return (
-    <section className="mb-32">
+    <section className="mb-24 sm:mb-32">
       <div className="mb-8 flex items-end justify-between">
         <h2 className="font-hedvig-serif text-2xl sm:text-3xl">
           Things I&apos;ve Worked On

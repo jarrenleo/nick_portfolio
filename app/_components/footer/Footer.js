@@ -4,7 +4,7 @@ import Logo from "../navigation/Logo";
 export default function Footer() {
   return (
     <footer id="footer" className="bg-muted">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 pb-12 pt-16">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-12">
         <div className="flex flex-col gap-14">
           <Logo />
           <div className="flex flex-col text-sm sm:text-base">

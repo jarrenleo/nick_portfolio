@@ -5,7 +5,7 @@ export default async function WorkExperience() {
   const workExperience = await getWorkExperience();
 
   return (
-    <section className="mb-16">
+    <section className="mb-24 sm:mb-32">
       <h2 className="mb-4 font-hedvig-serif text-2xl sm:text-3xl">
         Places I&apos;ve Worked At
       </h2>
