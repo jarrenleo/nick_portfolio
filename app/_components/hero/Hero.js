@@ -1,7 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
+import { Mail, Linkedin } from "lucide-react";
+import MySkillsFuture from "../icons/MySkillsFuture";
 
 export default function Hero() {
   return (
@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="flex flex-col">
         <div className="relative mb-8 h-32 w-32">
           <Image
-            src="/profile.png"
+            src="/profile.jpg"
             alt="Profile image"
             fill
             className="rounded-full"
@@ -23,7 +23,7 @@ export default function Hero() {
           </h1>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-6">
           <p className="text-balance text-muted-foreground">
             A firm believer that the book is always better than the film, I love
             crafting stories and messages that bring meaning and insight.
@@ -35,19 +35,22 @@ export default function Hero() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Link
-            href="#footer"
-            rel="noopener noreferrer"
-            className="rounded-xl bg-foreground px-4 py-3 text-sm font-medium text-background transition-colors hover:bg-muted-foreground"
-          >
-            Contact me
+          <Link href="mailto:nicholas@nicholas-portfolio.com" target="_blank">
+            <Mail className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
           </Link>
-          <div className="flex items-center gap-2.5 rounded-full bg-[rgb(225,249,220)] px-4 py-2.5 text-sm font-medium text-[rgb(23,141,0)]">
-            <span className="relative h-2 w-2 rounded-full bg-[rgb(23,141,0)]">
-              <span className="absolute h-2 w-2 animate-ping rounded-full bg-[rgb(23,141,0)]"></span>
-            </span>
-            Open to work
-          </div>
+          <Link
+            href="https://www.linkedin.com/in/nicholas-portfolio/"
+            target="_blank"
+          >
+            <Linkedin className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
+          </Link>
+          <Link
+            href="https://www.myskillsfuture.gov.sg/csp/public/profile/0zw4h52vob8f14"
+            target="_blank"
+            className="h-5"
+          >
+            <MySkillsFuture className="h-full w-full" />
+          </Link>
         </div>
       </div>
     </section>
