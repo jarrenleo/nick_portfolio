@@ -35,11 +35,11 @@ export default function Hero() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Link href="mailto:nicholas@nicholas-portfolio.com" target="_blank">
+          <Link href="mailto:nicongggg@gmail.com" target="_blank">
             <Mail className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
           </Link>
           <Link
-            href="https://www.linkedin.com/in/nicholas-portfolio/"
+            href="https://www.linkedin.com/in/nicholasong-re"
             target="_blank"
           >
             <Linkedin className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
