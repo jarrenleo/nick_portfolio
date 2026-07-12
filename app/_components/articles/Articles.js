@@ -1,54 +1,108 @@
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "../Reveal";
 import { getArticles } from "../../_lib/data-service";
 
 export default async function Articles() {
   const articles = await getArticles();
 
+  if (!articles.length) return null;
+
+  const [featured, ...rest] = articles;
+  const hasOddRest = rest.length % 2 === 1;
+  const gridArticles = hasOddRest ? rest.slice(0, -1) : rest;
+  const closingArticle = hasOddRest ? rest.at(-1) : null;
+
   return (
     <section className="mb-24 sm:mb-32">
-      <div className="mb-8 flex items-end justify-between">
-        <h2 className="font-hedvig-serif text-2xl sm:text-3xl">
+      <div className="mb-10 flex items-baseline justify-between">
+        <h2 className="font-hedvig-serif text-3xl tracking-tight sm:text-4xl">
           Things I&apos;ve Worked On
         </h2>
         <Link
           href="https://thesmartlocal.com/read/author/nicholasong/"
           target="_blank"
-          className="font-medium transition-colors hover:text-muted-foreground"
+          className="text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
         >
           View all
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article) => (
-          <Link
-            href={article.link}
-            key={article.id}
-            target="_blank"
-            className="group"
-          >
-            <div className="relative mb-6 h-48 w-full overflow-hidden rounded-xl">
-              <Image
-                src={article.image}
-                alt={article.title}
-                fill
-                className="object-cover transition-all group-hover:opacity-80"
-              />
-            </div>
+      <Reveal className="mb-14">
+        <Link
+          href={featured.link}
+          target="_blank"
+          className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-10"
+        >
+          <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl">
+            <Image
+              src={featured.image}
+              alt={featured.title}
+              fill
+              className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+            />
+          </div>
+          <div>
+            <p className="mb-3 text-sm text-muted-foreground">
+              {featured.category} &middot; {featured.read_time} min read
+            </p>
+            <h3 className="font-hedvig-serif text-2xl leading-snug transition-colors duration-200 group-hover:text-accent sm:text-3xl">
+              {featured.title}
+            </h3>
+          </div>
+        </Link>
+      </Reveal>
 
-            <div>
-              <h3 className="mb-4 font-medium">{article.title}</h3>
-              <div className="flex items-center gap-4">
-                <p className="text-sm font-medium">{article.category}</p>
-                <p className="text-sm text-muted-foreground">
-                  {article.read_time} mins read
-                </p>
+      <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2">
+        {gridArticles.map((article, index) => (
+          <Reveal key={article.id} delay={(index % 2) * 60}>
+            <Link href={article.link} target="_blank" className="group">
+              <div className="relative mb-5 aspect-[3/2] w-full overflow-hidden rounded-xl">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+                />
               </div>
-            </div>
-          </Link>
+              <p className="mb-2 text-sm text-muted-foreground">
+                {article.category} &middot; {article.read_time} min read
+              </p>
+              <h3 className="font-medium leading-snug transition-colors duration-200 group-hover:text-accent">
+                {article.title}
+              </h3>
+            </Link>
+          </Reveal>
         ))}
       </div>
+
+      {closingArticle && (
+        <Reveal className="mt-14">
+          <Link
+            href={closingArticle.link}
+            target="_blank"
+            className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-10"
+          >
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl sm:order-2">
+              <Image
+                src={closingArticle.image}
+                alt={closingArticle.title}
+                fill
+                className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+              />
+            </div>
+            <div className="sm:order-1">
+              <p className="mb-3 text-sm text-muted-foreground">
+                {closingArticle.category} &middot; {closingArticle.read_time}{" "}
+                min read
+              </p>
+              <h3 className="font-hedvig-serif text-2xl leading-snug transition-colors duration-200 group-hover:text-accent sm:text-3xl">
+                {closingArticle.title}
+              </h3>
+            </div>
+          </Link>
+        </Reveal>
+      )}
     </section>
   );
 }

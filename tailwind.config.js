@@ -1,5 +1,8 @@
 module.exports = {
   darkMode: ["class"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +14,9 @@ module.exports = {
     extend: {
       fontFamily: {
         "hedvig-serif": ["var(--font-hedvig-letters-serif)", "serif"],
+      },
+      transitionTimingFunction: {
+        "out-expo": "var(--ease-out-expo)",
       },
       colors: {
         background: "var(--background)",

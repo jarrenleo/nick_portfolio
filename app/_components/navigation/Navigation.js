@@ -3,20 +3,20 @@ import Logo from "./Logo";
 
 export default function Navigation() {
   return (
-    <nav className="sticky top-0 z-10 mb-24 w-full bg-background py-6 sm:mb-32">
-      <div className="flex items-end justify-between">
+    <nav className="nav-material sticky top-0 z-10 mb-20 w-full bg-background/80 py-5 backdrop-blur-md sm:mb-28">
+      <div className="flex items-center justify-between">
         <Logo />
-        <div className="flex items-center gap-4 text-lg font-medium sm:text-xl">
+        <div className="flex items-center gap-6 text-sm font-medium">
           <Link
             href="https://hrtbkhxwperxcpdnwgzz.supabase.co/storage/v1/object/public/resume//Resume_NicholasOng.pdf"
             target="_blank"
-            className="transition-colors hover:text-muted-foreground"
+            className="inline-block text-muted-foreground transition-[color,transform] duration-150 ease-out-expo hover:text-foreground active:scale-[0.98]"
           >
             Resume
           </Link>
           <Link
             href="#footer"
-            className="transition-colors hover:text-muted-foreground"
+            className="inline-block text-muted-foreground transition-[color,transform] duration-150 ease-out-expo hover:text-foreground active:scale-[0.98]"
           >
             Contact
           </Link>

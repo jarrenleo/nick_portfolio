@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "../Reveal";
 import { getWorkExperience } from "../../_lib/data-service";
 
 export default async function WorkExperience() {
@@ -6,24 +7,25 @@ export default async function WorkExperience() {
 
   return (
     <section className="mb-24 sm:mb-32">
-      <h2 className="mb-4 font-hedvig-serif text-2xl sm:text-3xl">
+      <h2 className="mb-6 font-hedvig-serif text-3xl tracking-tight sm:text-4xl">
         Places I&apos;ve Worked At
       </h2>
-      <table className="w-full border-separate border-spacing-y-6">
-        <tbody>
+      <Reveal>
+        <ul className="divide-y divide-border">
           {workExperience.map((job, index) => (
-            <tr key={index}>
-              <td>
-                <div className="relative h-10 w-10 md:h-14 md:w-14">
+            <li
+              key={index}
+              className="flex items-center justify-between gap-4 py-5"
+            >
+              <div className="flex items-center gap-4">
+                <div className="relative h-10 w-10 shrink-0 sm:h-12 sm:w-12">
                   <Image
                     src={job.logo}
                     alt={`${job.company} logo`}
                     fill
-                    className="rounded-full"
+                    className="rounded-full object-cover"
                   />
                 </div>
-              </td>
-              <td className="pl-2">
                 <div className="flex flex-col gap-0.5">
                   <span className="text-sm font-medium sm:text-base">
                     {job.company}
@@ -32,16 +34,14 @@ export default async function WorkExperience() {
                     {job.role}
                   </span>
                 </div>
-              </td>
-              <td>
-                <span className="text-sm font-medium sm:text-base">
-                  {job.period}
-                </span>
-              </td>
-            </tr>
+              </div>
+              <span className="shrink-0 text-sm tabular-nums text-muted-foreground">
+                {job.period}
+              </span>
+            </li>
           ))}
-        </tbody>
-      </table>
+        </ul>
+      </Reveal>
     </section>
   );
 }
