@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import Reveal from "../Reveal";
+import FadeInImage from "../FadeInImage";
 import { getArticles } from "../../_lib/data-service";
 
 export default async function Articles() {
@@ -32,14 +32,14 @@ export default async function Articles() {
         <Link
           href={featured.link}
           target="_blank"
-          className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-10"
+          className="group grid gap-6 transition-transform duration-150 ease-out-expo active:scale-[0.99] sm:grid-cols-2 sm:items-center sm:gap-10"
         >
           <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl">
-            <Image
+            <FadeInImage
               src={featured.image}
               alt={featured.title}
               fill
-              className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+              className="object-cover group-hover:scale-[1.03]"
             />
           </div>
           <div>
@@ -56,13 +56,17 @@ export default async function Articles() {
       <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2">
         {gridArticles.map((article, index) => (
           <Reveal key={article.id} delay={(index % 2) * 60}>
-            <Link href={article.link} target="_blank" className="group">
+            <Link
+              href={article.link}
+              target="_blank"
+              className="group block transition-transform duration-150 ease-out-expo active:scale-[0.99]"
+            >
               <div className="relative mb-5 aspect-[3/2] w-full overflow-hidden rounded-xl">
-                <Image
+                <FadeInImage
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+                  className="object-cover group-hover:scale-[1.03]"
                 />
               </div>
               <p className="mb-2 text-sm text-muted-foreground">
@@ -81,14 +85,14 @@ export default async function Articles() {
           <Link
             href={closingArticle.link}
             target="_blank"
-            className="group grid gap-6 sm:grid-cols-2 sm:items-center sm:gap-10"
+            className="group grid gap-6 transition-transform duration-150 ease-out-expo active:scale-[0.99] sm:grid-cols-2 sm:items-center sm:gap-10"
           >
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl sm:order-2">
-              <Image
+              <FadeInImage
                 src={closingArticle.image}
                 alt={closingArticle.title}
                 fill
-                className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+                className="object-cover group-hover:scale-[1.03]"
               />
             </div>
             <div className="sm:order-1">
