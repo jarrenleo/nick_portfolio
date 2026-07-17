@@ -14,12 +14,11 @@ export default function Hero() {
           </h1>
 
           <p className="fade-up fade-up-delay-1 mb-8 text-balance leading-relaxed text-muted-foreground">
-            A firm believer that the book is always better than the film, I
-            love crafting stories and messages that bring meaning and insight.
+            A firm believer that the book is always better than the film, I love
+            crafting stories and messages that bring meaning and insight.
             Meticulous to a fault, I take pride in researching on my subject
-            matter regardless of importance or scale. If you&apos;re looking
-            for a
-            <span className="font-medium text-foreground"> writer </span>
+            matter regardless of importance or scale. If you&apos;re looking for
+            a<span className="font-medium text-foreground"> writer </span>
             who blends humour, flair, creativity, and wit, I&apos;m your guy.
           </p>
 
@@ -48,7 +47,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="fade-up fade-up-delay-1 relative h-32 w-32 shrink-0 sm:h-44 sm:w-44">
+        <div className="fade-up fade-up-delay-1 relative h-32 w-32 shrink-0 sm:mx-auto sm:h-44 sm:w-44">
           <Image
             src="/profile.jpg"
             alt="Nicholas Ong"
